@@ -1,4 +1,4 @@
-<?php
+php<?php
 
 namespace Tests\AppBundle\Controller;
 
