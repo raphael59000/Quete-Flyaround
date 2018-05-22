@@ -259,7 +259,7 @@ class Site
      *
      * @return Site
      */
-    public function addArrival(\AppBundle\Entity\Flight $arrival)
+    public function addArrival(Flight $arrival)
     {
         $this->arrivals[] = $arrival;
 
@@ -271,7 +271,7 @@ class Site
      *
      * @param \AppBundle\Entity\Flight $arrival
      */
-    public function removeArrival(\AppBundle\Entity\Flight $arrival)
+    public function removeArrival(Flight $arrival)
     {
         $this->arrivals->removeElement($arrival);
     }
