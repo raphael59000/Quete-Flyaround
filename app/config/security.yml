@@ -39,4 +39,3 @@ security:
         - { path: ^/user/, role: ROLE_USER }
 
 
-        
