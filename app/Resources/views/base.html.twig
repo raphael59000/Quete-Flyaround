@@ -5,9 +5,28 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" href="{{ asset('build/style.css') }}">
     </head>
     <body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{{ path('homepage') }}">FLY AROUND</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ path('homepage') }}">Accueil</a></li>
+                    <li><a href="{{ path('planemodel_index') }}">Avions</a></li>
+                    <li><a href="{{ path('reservation_index') }}">Réservations</a></li>
+                    <li><a href="{{ path('flight_index') }}">Vols</a></li>
+                    <li><a href="{{ path('site_index') }}">Terrains</a></li>
+                    <li><a href="{{ path('review_index') }}">Avis</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
         {% block body %}{% endblock %}
+        <script src="{{ asset('build/app.js') }}"></script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>
